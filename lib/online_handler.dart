@@ -27,7 +27,7 @@ class OnlineHandler extends SlackCommandHandler {
   Future<shelf.Response> handle(shelf.Request request) async {
     final params = request.context;
     final BungieClient client = params[param.BUNGIE_CLIENT];
-    final option = params[param.SLACK_TEXT];
+    var option = params[param.SLACK_TEXT];
     final username = params[param.SLACK_USERNAME];
     if (option == _OPTION_HELP) {
       _log.info('@$username needs help');
