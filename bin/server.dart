@@ -54,10 +54,10 @@ main() async {
   final worldDatabase = _getConfigValue('DATABASE_URL');
   final useDelayedResponses =
       _getConfigValue('USE_DELAYED_RESPONSES') == 'true';
-  final twitchClientId = _getConfigValue('TWITCH_CLIENT_ID');
-  final twitchStreamers = _getConfigValue('TWITCH_STREAMERS').split(',');
-  final theHundredAuthToken = _getConfigValue('THE_HUNDRED_AUTH_TOKEN');
-  final theHundredGroupId = _getConfigValue('THE_HUNDRED_GROUP_ID');
+  // final twitchClientId = _getConfigValue('TWITCH_CLIENT_ID');
+  // final twitchStreamers = _getConfigValue('TWITCH_STREAMERS').split(',');
+  // final theHundredAuthToken = _getConfigValue('THE_HUNDRED_AUTH_TOKEN');
+  // final theHundredGroupId = _getConfigValue('THE_HUNDRED_GROUP_ID');
   final slackAuthToken = _getConfigValue('SLACK_BOT_TOKEN');
   final slackClientId = _getConfigValue('SLACK_CLIENT_ID');
   final slackClientSecret = _getConfigValue('SLACK_CLIENT_SECRET');
