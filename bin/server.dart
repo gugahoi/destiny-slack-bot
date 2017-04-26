@@ -66,8 +66,8 @@ main() async {
   final baseMiddleware = const shelf.Pipeline()
       .addMiddleware(
           shelf.logRequests(logger: (String message, _) => log.info(message)))
-      .addMiddleware(
-          TheHundredMiddleWare.get(theHundredAuthToken, theHundredGroupId))
+      // .addMiddleware(
+      //     TheHundredMiddleWare.get(theHundredAuthToken, theHundredGroupId))
       .addMiddleware(SlackClientMiddleware.get(slackAuthToken))
       .middleware;
 
@@ -92,11 +92,11 @@ main() async {
                 ..addAll(new GrimoireHandler(), path: '/grimoire')
                 ..addAll(new CardHandler(), path: '/card')
                 ..addAll(new XurHandler(), path: '/xur')
-                ..addAll(new TwitchHandler(twitchClientId, twitchStreamers),
-                    path: '/twitch')
+                // ..addAll(new TwitchHandler(twitchClientId, twitchStreamers),
+                    // path: '/twitch')
                 ..addAll(new WeeklyHandler(), path: '/weekly')
                 ..addAll(new TriumphsHandler(), path: '/triumphs')
-                ..addAll(new LfgHandler(), path: '/lfg')
+                // ..addAll(new LfgHandler(), path: '/lfg')
                 ..addAll(new WastedHandler(), path: '/wasted')
                 ..addAll(new ProfileHandler(), path: '/profile'),
               path: '/commands',
