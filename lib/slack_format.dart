@@ -8,7 +8,7 @@ const ATTACHMENT_COLORS = const ['#4285f4', '#f4b400', '#0f9d58', '#db4437'];
 
 /// Creates a response object with simple text content.
 shelf.Response createTextResponse(String content,
-    {bool private: false, bool expandLinks: true}) {
+    {bool private: true, bool expandLinks: true}) {
   final json = new Map();
   if (!private) {
     json['response_type'] = 'in_channel';
