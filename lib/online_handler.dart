@@ -36,12 +36,10 @@ class OnlineHandler extends SlackCommandHandler {
           ' Playstation (*psn*)',
           private: true);
     }
-    _log.info('@$username viewing online guardians on $option');
     if (option != _OPTION_XBL && option != _OPTION_PSN) {
-      _log.warning('Invalid platform identifier');
-      return createTextResponse('Err, that is not a valid platform!',
-          private: true);
+      option = _OPTION_PSN;
     }
+    _log.info('@$username viewing online guardians on $option');
     final members = await client.getClanRoster(_clanId, option == _OPTION_XBL);
     final nowPlaying = <ClanMember>[];
     final activities = <DestinyId, Activity>{};
