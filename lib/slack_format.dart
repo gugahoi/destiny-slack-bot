@@ -23,7 +23,7 @@ shelf.Response createTextResponse(String content,
 
 /// Creates a response object with some attachments.
 shelf.Response createAttachmentsResponse(List<Map> attachments,
-    {bool private: false, bool replace: false}) {
+    {bool private: true, bool replace: false}) {
   final json = new Map();
   if (!private) {
     json['response_type'] = 'in_channel';
@@ -39,7 +39,7 @@ shelf.Response createAttachmentsResponse(List<Map> attachments,
 
 /// Creates a response object with an attachment.
 shelf.Response createAttachmentResponse(Map attachment,
-    {bool private: false, bool replace: false}) {
+    {bool private: true, bool replace: false}) {
   return createAttachmentsResponse([attachment],
       private: private, replace: replace);
 }
