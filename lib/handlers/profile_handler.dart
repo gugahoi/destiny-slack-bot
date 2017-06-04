@@ -15,7 +15,7 @@ import '../utils/players.dart' as players;
 const _OPTION_HELP = 'help';
 
 const _ID_RAID_WOM_NM = 260765522;
-const _ID_RAID_WOM_HM = 1387993552;
+const _ID_RAID_WOM_HM = 3356249023;
 
 /// Exposes relevant data about a given player.
 class ProfileHandler extends SlackCommandHandler {
